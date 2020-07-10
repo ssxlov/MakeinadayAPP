@@ -261,7 +261,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8YA-eE-Sn1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Список задач" id="fUt-tW-ghh"/>
+                    <navigationItem key="navigationItem" title="Список задач" id="fUt-tW-ghh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="wTn-FW-xP4">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Giv-W8-dzU">
+                                <rect key="frame" x="308" y="6" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="settings"/>
+                                <connections>
+                                    <segue destination="2Lx-EK-jOf" kind="show" id="nB4-Se-gCV"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="AllTaskView" destination="r2b-I0-Ji6" id="8nc-NS-MFI"/>
                         <outlet property="HighTaskView" destination="nQK-4O-FDw" id="Lju-0d-ztd"/>
@@ -273,6 +284,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y1j-HR-13p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="114.53201970443351"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wB2-Ux-r7V">
+            <objects>
+                <viewController id="2Lx-EK-jOf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HFm-Uz-PWe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="B6j-cn-XRt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0bC-Vo-OR9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C91-Tq-KZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="115"/>
         </scene>
         <!--All Task View Controller-->
         <scene sceneID="dcn-Ne-IqT">
@@ -397,5 +424,6 @@
     </scenes>
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="settings" width="26" height="26"/>
     </resources>
 </document>
