@@ -11,6 +11,8 @@
 		E1197B0C24B4C48700524601 /* MidTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1197B0B24B4C48700524601 /* MidTaskTableViewCell.swift */; };
 		E1197B0E24B4C48F00524601 /* LowTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1197B0D24B4C48F00524601 /* LowTaskTableViewCell.swift */; };
 		E1197B5F24B7E4DD00524601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1197B5E24B7E4DC00524601 /* AppDelegate.swift */; };
+		E1197B6924BA088800524601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1197B6824BA088800524601 /* Assets.xcassets */; };
+		E1197B6B24BA09A100524601 /* SettingsVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1197B6A24BA09A100524601 /* SettingsVIewController.swift */; };
 		E11F276524B1F67E00CAA7A6 /* AllTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F276424B1F67E00CAA7A6 /* AllTaskViewController.swift */; };
 		E11F276724B1F68900CAA7A6 /* HighTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F276624B1F68900CAA7A6 /* HighTaskViewController.swift */; };
 		E11F276924B1F69400CAA7A6 /* MidTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F276824B1F69400CAA7A6 /* MidTaskViewController.swift */; };
@@ -23,7 +25,6 @@
 		E1D00A4324A3954E00394094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D00A4224A3954E00394094 /* SceneDelegate.swift */; };
 		E1D00A4524A3954E00394094 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D00A4424A3954E00394094 /* ToDoViewController.swift */; };
 		E1D00A4824A3954E00394094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D00A4624A3954E00394094 /* Main.storyboard */; };
-		E1D00A4A24A3955100394094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D00A4924A3955100394094 /* Assets.xcassets */; };
 		E1D00A4D24A3955100394094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D00A4B24A3955100394094 /* LaunchScreen.storyboard */; };
 		E1D00A6124A3AD1500394094 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E1D00A6024A3AD1500394094 /* SnapKit */; };
 		E1D00A6A24A4990100394094 /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D00A6924A4990100394094 /* AnswerTableViewCell.swift */; };
@@ -36,6 +37,8 @@
 		E1197B0B24B4C48700524601 /* MidTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidTaskTableViewCell.swift; sourceTree = "<group>"; };
 		E1197B0D24B4C48F00524601 /* LowTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowTaskTableViewCell.swift; sourceTree = "<group>"; };
 		E1197B5E24B7E4DC00524601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1197B6824BA088800524601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1197B6A24BA09A100524601 /* SettingsVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVIewController.swift; sourceTree = "<group>"; };
 		E11F276424B1F67E00CAA7A6 /* AllTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskViewController.swift; sourceTree = "<group>"; };
 		E11F276624B1F68900CAA7A6 /* HighTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighTaskViewController.swift; sourceTree = "<group>"; };
 		E11F276824B1F69400CAA7A6 /* MidTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidTaskViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +52,6 @@
 		E1D00A4224A3954E00394094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1D00A4424A3954E00394094 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		E1D00A4724A3954E00394094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E1D00A4924A3955100394094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1D00A4C24A3955100394094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1D00A4E24A3955100394094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D00A6924A4990100394094 /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
@@ -132,8 +134,8 @@
 				E1D00A4B24A3955100394094 /* LaunchScreen.storyboard */,
 				E1D00A6D24A4EE3500394094 /* Extenstions */,
 				E1197B3924B7656A00524601 /* Data */,
-				E1D00A4924A3955100394094 /* Assets.xcassets */,
 				E1D00A4E24A3955100394094 /* Info.plist */,
+				E1197B6824BA088800524601 /* Assets.xcassets */,
 			);
 			path = Makeinaday;
 			sourceTree = "<group>";
@@ -154,6 +156,7 @@
 				E1D00A4424A3954E00394094 /* ToDoViewController.swift */,
 				E11F276C24B1F6D100CAA7A6 /* TaskListViewController.swift */,
 				E11F276424B1F67E00CAA7A6 /* AllTaskViewController.swift */,
+				E1197B6A24BA09A100524601 /* SettingsVIewController.swift */,
 				E11F276624B1F68900CAA7A6 /* HighTaskViewController.swift */,
 				E11F276824B1F69400CAA7A6 /* MidTaskViewController.swift */,
 				E11F276A24B1F6A900CAA7A6 /* LowTaskViewController.swift */,
@@ -227,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D00A4D24A3955100394094 /* LaunchScreen.storyboard in Resources */,
-				E1D00A4A24A3955100394094 /* Assets.xcassets in Resources */,
+				E1197B6924BA088800524601 /* Assets.xcassets in Resources */,
 				E1D00A4824A3954E00394094 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +246,7 @@
 				E1197B0A24B4C47E00524601 /* HighTaskTableViewCell.swift in Sources */,
 				E1D00A4524A3954E00394094 /* ToDoViewController.swift in Sources */,
 				E11F277224B2999600CAA7A6 /* Model.xcdatamodeld in Sources */,
+				E1197B6B24BA09A100524601 /* SettingsVIewController.swift in Sources */,
 				E1D00A7D24A75B1D00394094 /* UITableView+Ex.swift in Sources */,
 				E11F276924B1F69400CAA7A6 /* MidTaskViewController.swift in Sources */,
 				E1D00A6A24A4990100394094 /* AnswerTableViewCell.swift in Sources */,

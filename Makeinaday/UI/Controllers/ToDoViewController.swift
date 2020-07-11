@@ -29,7 +29,6 @@ class ToDoViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.toDoTableView.register(AnswerTableViewCell.self, forCellReuseIdentifier: "Answer")
         
         registerForKeyboardWillShowNotification(toDoTableView, priorityView: priorityView, inputView: myInputView)
@@ -41,45 +40,45 @@ class ToDoViewController: UIViewController {
     
     // MARK: - Methods
     @IBAction func setHighPriority(_ sender: Any) {
-        myTextField.textColor = .systemRed
+        self.myTextField.textColor = .systemRed
         let text = myTextField.text!
         
         if text.count != 0{
             self.model.append(text)
             self.toDoTableView.insertRows(at: [IndexPath(row: self.model.count - 1, section: 0)], with: .right)
-            highPriorityArray.append(text)
-            myTextField.textColor = .black
+            self.highPriorityArray.append(text)
+            self.myTextField.textColor = .black
         }
-        toDoTableView.scrollToBottom()
+        self.toDoTableView.scrollToBottom()
         
-        let object = Model(context: CoreDataModel.context)
+        let object = Model(context: self.CoreDataModel.context)
         object.high = text
         object.alltask = text
         do {
-            try CoreDataModel.context.save()
+            try self.CoreDataModel.context.save()
         } catch let error as NSError {
             print("Couldn't save data. \(error), \(error.userInfo)")
         }
     }
     
     @IBAction func setMediumPriority(_ sender: Any) {
-        myTextField.textColor = .systemYellow
+        self.myTextField.textColor = .systemYellow
         let text = myTextField.text!
         
         if text.count != 0{
             self.model.append(text)
             self.toDoTableView.insertRows(at: [IndexPath(row: self.model.count - 1, section: 0)], with: .right)
-            mediumPriorityArray.append(text)
-            myTextField.textColor = .black
+            self.mediumPriorityArray.append(text)
+            self.myTextField.textColor = .black
         }
-        toDoTableView.scrollToBottom()
+        self.toDoTableView.scrollToBottom()
         
-        let object = Model(context: CoreDataModel.context)
+        let object = Model(context: self.CoreDataModel.context)
         object.medium = text
         object.alltask = text
         do {
             if text.count != 0 {
-                try CoreDataModel.context.save()
+                try self.self.CoreDataModel.context.save()
             }
         } catch let error as NSError {
             print("Couldn't save data. \(error), \(error.userInfo)")
@@ -87,23 +86,23 @@ class ToDoViewController: UIViewController {
     }
     
     @IBAction func setLowPriority(_ sender: Any) {
-        myTextField.textColor = .systemGreen
+        self.myTextField.textColor = .systemGreen
         
         let text = myTextField.text!
         if text.count != 0{
             self.model.append(text)
             self.toDoTableView.insertRows(at: [IndexPath(row: self.model.count - 1 , section: 0)], with: .right)
-            lowPriorityArray.append(text)
-            myTextField.textColor = .black
+            self.lowPriorityArray.append(text)
+            self.myTextField.textColor = .black
         }
-        toDoTableView.scrollToBottom()
+        self.toDoTableView.scrollToBottom()
         
-        let object = Model(context: CoreDataModel.context)
+        let object = Model(context: self.CoreDataModel.context)
         object.low = text
         object.alltask = text
         do {
             if text.count != 0 {
-                try CoreDataModel.context.save()
+                try self.CoreDataModel.context.save()
             }
         } catch let error as NSError {
             print("Couldn't save data. \(error), \(error.userInfo)")
@@ -123,10 +122,10 @@ extension ToDoViewController: UITableViewDelegate, UITableViewDataSource {
             withIdentifier: "Answer",
             for: indexPath)
         (answerCell as? AnswerTableViewCell)?.set(
-            description: myTextField.text ?? "none",
-            backgroungColor: myTextField.textColor ?? UIColor.white)
+            description: self.myTextField.text ?? "none",
+            backgroungColor: self.myTextField.textColor ?? UIColor.white)
         answerCell.selectionStyle = .none
-        myTextField.text = ""
+        self.myTextField.text = ""
         return answerCell
     }
 }

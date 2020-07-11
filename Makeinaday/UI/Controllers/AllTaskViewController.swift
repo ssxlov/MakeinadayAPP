@@ -22,23 +22,23 @@ class AllTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        allTaskTableView.delegate = self
-        allTaskTableView.dataSource = self
-        allTaskTableView.separatorStyle = .none
+        self.allTaskTableView.delegate = self
+        self.allTaskTableView.dataSource = self
+        self.allTaskTableView.separatorStyle = .none
         self.allTaskTableView.register(AllTaskTableViewCell.self, forCellReuseIdentifier: "AllTask")
-        getData(from: "Model")
+        self.getData(from: "Model")
     }
     
     // MARK: - Methods
     func getData(from name: String) {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: name)
         do {
-            let result = try CoreDataModel.context.fetch(fetchRequest)
+            let result = try self.CoreDataModel.context.fetch(fetchRequest)
             result.forEach{
                 guard let task = $0.value(forKey: "alltask") as? String else {
                     return
                 }
-                taskArr.append(task)
+                self.taskArr.append(task)
                 
             }
         } catch let error as NSError {
@@ -48,11 +48,11 @@ class AllTaskViewController: UIViewController {
     
     @objc func deleteUser(_ sender: UIButton) {
         if let cell = sender.superview?.superview?.superview as? AllTaskTableViewCell,
-            let indexPath = allTaskTableView.indexPath(for: cell) {
+            let indexPath = self.allTaskTableView.indexPath(for: cell) {
             self.taskArr.remove(at: indexPath.row)
             self.allTaskTableView.deleteRows(at: [indexPath], with: .fade)
         }
-        allTaskTableView.reloadData()
+        self.allTaskTableView.reloadData()
     }
 }
 
@@ -69,7 +69,7 @@ extension AllTaskViewController: UITableViewDelegate, UITableViewDataSource {
         (taskCell as? AllTaskTableViewCell)?.set(
             description: taskArr[indexPath.row])
         (taskCell as? AllTaskTableViewCell)?.deleteTaskButton.addTarget(self,
-                                                                        action: #selector(deleteUser(_ :)),
+                                                                        action: #selector(self.deleteUser(_ :)),
                                                                         for: .touchUpInside)
         
         return taskCell

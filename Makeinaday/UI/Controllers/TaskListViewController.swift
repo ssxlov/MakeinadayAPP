@@ -26,38 +26,38 @@ class TaskListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AllTaskView.alpha = 1
-        HighTaskView.alpha = 0
-        MidTaskView.alpha = 0
-        LowTaskView.alpha = 0
+        self.AllTaskView.alpha = 1
+        self.HighTaskView.alpha = 0
+        self.MidTaskView.alpha = 0
+        self.LowTaskView.alpha = 0
         
-        sc.setTitleTextAttributes(whiteTextForSC, for: .normal)
-        sc.setTitleTextAttributes(blackTextForSC, for: .selected)
+        self.sc.setTitleTextAttributes(self.whiteTextForSC, for: .normal)
+        self.sc.setTitleTextAttributes(self.blackTextForSC, for: .selected)
     }
     
     // MARK: - Methods
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         sender.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .disabled)
         if sender.selectedSegmentIndex == 0 {
-            AllTaskView.alpha = 1
-            HighTaskView.alpha = 0
-            MidTaskView.alpha = 0
-            LowTaskView.alpha = 0
+            self.AllTaskView.alpha = 1
+            self.HighTaskView.alpha = 0
+            self.MidTaskView.alpha = 0
+            self.LowTaskView.alpha = 0
         } else if sender.selectedSegmentIndex == 1 {
-            AllTaskView.alpha = 0
-            HighTaskView.alpha = 1
-            MidTaskView.alpha = 0
-            LowTaskView.alpha = 0
+            self.AllTaskView.alpha = 0
+            self.HighTaskView.alpha = 1
+            self.MidTaskView.alpha = 0
+            self.LowTaskView.alpha = 0
         } else if sender.selectedSegmentIndex == 2 {
-            AllTaskView.alpha = 0
-            HighTaskView.alpha = 0
-            MidTaskView.alpha = 1
-            LowTaskView.alpha = 0
+            self.AllTaskView.alpha = 0
+            self.HighTaskView.alpha = 0
+            self.MidTaskView.alpha = 1
+            self.LowTaskView.alpha = 0
         } else {
-            AllTaskView.alpha = 0
-            HighTaskView.alpha = 0
-            MidTaskView.alpha = 0
-            LowTaskView.alpha = 1
+            self.AllTaskView.alpha = 0
+            self.HighTaskView.alpha = 0
+            self.MidTaskView.alpha = 0
+            self.LowTaskView.alpha = 1
         }
     }
 }
