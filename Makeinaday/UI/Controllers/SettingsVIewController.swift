@@ -20,9 +20,6 @@ class SettingsVIewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func switchTheme(_ sender: Any) {
-        
-    }
     @IBAction func deleteAllTask(_ sender: Any) {
         self.coreData.deleteAll(entityName: "Model")
     }

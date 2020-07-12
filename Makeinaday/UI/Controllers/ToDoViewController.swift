@@ -29,6 +29,7 @@ class ToDoViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.toDoTableView.register(AnswerTableViewCell.self, forCellReuseIdentifier: "Answer")
         
         registerForKeyboardWillShowNotification(toDoTableView, priorityView: priorityView, inputView: myInputView)

@@ -14,6 +14,9 @@ class HighTaskViewController: UIViewController {
     let CoreDataModel = CoreDataManager()
     private var highTasksData: [String] = []
     
+    let example1 = "Показать приложение 'Makeindayapp'"
+    let example2 = "Получить 10 баллов на защите проекта"
+    
     // MARK: - Outlets
     @IBOutlet weak var highTaskTableView: UITableView!
     
@@ -26,6 +29,8 @@ class HighTaskViewController: UIViewController {
         highTaskTableView.separatorStyle = .none
         
         self.highTaskTableView.register(HighTaskTableViewCell.self, forCellReuseIdentifier: "HighTasks")
+        highTasksData.append(example1)
+        highTasksData.append(example2)
         getData(from: "Model")
     }
     

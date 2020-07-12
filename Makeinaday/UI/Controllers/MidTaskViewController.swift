@@ -14,6 +14,8 @@ class MidTaskVIewController: UIViewController {
     let CoreDataModel = CoreDataManager()
     private var midTasksData: [String] = []
     
+    let example1 = "Рассказать про будущий функционал"
+    
     // MARK: - Outlets
     @IBOutlet weak var midTaskTableView: UITableView!
     
@@ -24,6 +26,8 @@ class MidTaskVIewController: UIViewController {
         midTaskTableView.delegate = self
         midTaskTableView.dataSource = self
         midTaskTableView.separatorStyle = .none
+        
+        midTasksData.append(example1)
         
         self.midTaskTableView.register(MidTaskTableViewCell.self, forCellReuseIdentifier: "MidTasks")
         getData(from: "Model")

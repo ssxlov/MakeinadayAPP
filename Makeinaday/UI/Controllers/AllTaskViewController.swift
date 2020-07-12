@@ -15,17 +15,26 @@ class AllTaskViewController: UIViewController {
     var taskArr: [String] = []
     let context = CoreDataManager.shared
     
+    let example1 = "Показать приложение 'Makeindayapp'"
+    let example2 = "Получить 10 баллов на защите проекта"
+    let example3 = "Рассказать про будущий функционал"
+    
     // MARK: - Outlets
     @IBOutlet weak var allTaskTableView: UITableView!
     
     // MARK: Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.allTaskTableView.delegate = self
         self.allTaskTableView.dataSource = self
+        
         self.allTaskTableView.separatorStyle = .none
         self.allTaskTableView.register(AllTaskTableViewCell.self, forCellReuseIdentifier: "AllTask")
+        
+        taskArr.append(example1)
+        taskArr.append(example2)
+        taskArr.append(example3)
+        
         self.getData(from: "Model")
     }
     
