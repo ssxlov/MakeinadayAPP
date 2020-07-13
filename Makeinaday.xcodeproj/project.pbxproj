@@ -74,13 +74,13 @@
 		E1197B3724B7651000524601 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E1197B3824B7653200524601 /* tableViewCells */,
-				E1D00A7B24A755C200394094 /* Controllers */,
+				E1D00A4624A3954E00394094 /* Main.storyboard */,
+				E1D00A4B24A3955100394094 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		E1197B3824B7653200524601 /* tableViewCells */ = {
+		E1197B3824B7653200524601 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				E1D00A6924A4990100394094 /* AnswerTableViewCell.swift */,
@@ -89,7 +89,7 @@
 				E1197B0B24B4C48700524601 /* MidTaskTableViewCell.swift */,
 				E1197B0D24B4C48F00524601 /* LowTaskTableViewCell.swift */,
 			);
-			path = tableViewCells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E1197B3924B7656A00524601 /* Data */ = {
@@ -129,9 +129,9 @@
 			children = (
 				E1D00A4224A3954E00394094 /* SceneDelegate.swift */,
 				E1197B5E24B7E4DC00524601 /* AppDelegate.swift */,
+				E1197B3824B7653200524601 /* Cells */,
+				E1D00A7B24A755C200394094 /* Controllers */,
 				E1197B3724B7651000524601 /* UI */,
-				E1D00A4624A3954E00394094 /* Main.storyboard */,
-				E1D00A4B24A3955100394094 /* LaunchScreen.storyboard */,
 				E1D00A6D24A4EE3500394094 /* Extenstions */,
 				E1197B3924B7656A00524601 /* Data */,
 				E1D00A4E24A3955100394094 /* Info.plist */,
